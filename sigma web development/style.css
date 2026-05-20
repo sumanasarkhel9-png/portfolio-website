@@ -1,0 +1,52 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-gap: 10px;
+  margin: 20px auto;
+  width: 380px;
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border: 3px solid #333;
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+  background: #f0f8ff;
+  transform: scale(1.05);
+}
+
+.cell.X {
+  color: #e74c3c; /* লাল */
+}
+
+.cell.O {
+  color: #3498db; /* নীল */
+}
+
+.winner {
+  background: #ffeaa7 !important;
+  animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+  from { background: #ffeaa7; }
+  to { background: #fdcb6e; }
+}
+
+
